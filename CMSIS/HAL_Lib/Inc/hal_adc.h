@@ -140,7 +140,7 @@ typedef struct
 #define ADC_Channel_18                               0x12 /*!< ADC Channel 18 */
 
 #define ADC_Channel_TempSensor                       0x11 /*!< Temperature sensor channel */
-#define ADC_Channel_VoltReference                    0x12 /*!< Internal reference voltage(ADC1) channel */
+#define ADC_Channel_VoltReference                    0x12 /*!< Internal reference voltage(ADC2) channel */
 
 /**
   * @brief Compare Channel Selection For Analog Watchdog

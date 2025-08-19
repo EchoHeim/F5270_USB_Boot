@@ -182,43 +182,45 @@ FlagStatus SYSCFG_GetPVDOFlagStatus(uint32_t flag)
   *         corresponding to the peripheral.
   * @param  perip_dma: Select the module that you want to remap.
   *         This parameter can be one of the following values:
-  * @arg    SYSCFG_TIM1_TRIG_RMP_DMA1_CH4
-  * @arg    SYSCFG_TIM1_TRIG_RMP_DMA1_CH7
-  * @arg    SYSCFG_TIM1_COM_RMP_DMA1_CH4
-  * @arg    SYSCFG_TIM1_COM_RMP_DMA1_CH8
-  * @arg    SYSCFG_TIM2_UP_RMP_DMA1_CH2
-  * @arg    SYSCFG_TIM2_UP_RMP_DMA1_CH3
-  * @arg    SYSCFG_TIM2_UP_RMP_DMA1_CH8
-  * @arg    SYSCFG_TIM2_CC3_RMP_DMA1_CH1
-  * @arg    SYSCFG_TIM2_CC3_RMP_DMA1_CH3
-  * @arg    SYSCFG_TIM2_CC4_RMP_DMA1_CH7
-  * @arg    SYSCFG_TIM2_CC4_RMP_DMA1_CH8
-  * @arg    SYSCFG_TIM5_UP_RMP_DMA2_CH2
-  * @arg    SYSCFG_TIM5_UP_RMP_DMA2_CH6
-  * @arg    SYSCFG_TIM6_UP_RMP_DMA2_CH3
-  * @arg    SYSCFG_TIM6_UP_RMP_DMA2_CH6
-  * @arg    SYSCFG_TIM7_UP_RMP_DMA2_CH4
-  * @arg    SYSCFG_TIM7_UP_RMP_DMA2_CH6
-  * @arg    SYSCFG_TIM8_TRIG_RMP_DMA2_CH2
-  * @arg    SYSCFG_TIM8_TRIG_RMP_DMA2_CH7
-  * @arg    SYSCFG_TIM8_UP_RMP_DMA2_CH1
-  * @arg    SYSCFG_TIM8_UP_RMP_DMA2_CH6
-  * @arg    SYSCFG_TIM8_COM_RMP_DMA2_CH2
-  * @arg    SYSCFG_TIM8_COM_RMP_DMA2_CH8
-  * @arg    SYSCFG_UART4_RX_RMP_DMA2_CH3
-  * @arg    SYSCFG_UART4_RX_RMP_DMA2_CH7
-  * @arg    SYSCFG_UART4_TX_RMP_DMA2_CH5
-  * @arg    SYSCFG_UART4_TX_RMP_DMA2_CH8
-  * @arg    SYSCFG_I3C1_RX_RMP_DMA2_CH5
-  * @arg    SYSCFG_I3C1_RX_RMP_DMA2_CH8
-  * @arg    SYSCFG_I3C1_TX_RMP_DMA2_CH4
-  * @arg    SYSCFG_I3C1_TX_RMP_DMA2_CH7
-  * @arg    SYSCFG_DAC_CH1_RMP_DMA2_CH3
-  * @arg    SYSCFG_DAC_CH1_RMP_DMA2_CH7
-  * @arg    SYSCFG_ADC1_RMP_DMA1_CH1
-  * @arg    SYSCFG_ADC1_RMP_DMA2_CH6
-  * @arg    SYSCFG_ADC2_RMP_DMA1_CH2
-  * @arg    SYSCFG_ADC2_RMP_DMA2_CH8
+  * @arg    #define SYSCFG_TIM1_TRIG_RMP_DMA1_CH4     
+  * @arg    #define SYSCFG_TIM1_TRIG_RMP_DMA1_CH7     
+  * @arg    #define SYSCFG_TIM1_COM_RMP_DMA1_CH4      
+  * @arg    #define SYSCFG_TIM1_COM_RMP_DMA1_CH8      
+  * @arg    #define SYSCFG_TIM2_UP_RMP_DMA1_CH2       
+  * @arg    #define SYSCFG_TIM2_UP_RMP_DMA1_CH3       
+  * @arg    #define SYSCFG_TIM2_UP_RMP_DMA1_CH8       
+  * @arg    #define SYSCFG_TIM2_CC3_RMP_DMA1_CH1      
+  * @arg    #define SYSCFG_TIM2_CC3_RMP_DMA1_CH3      
+  * @arg    #define SYSCFG_TIM2_CC4_RMP_DMA1_CH7      
+  * @arg    #define SYSCFG_TIM2_CC4_RMP_DMA1_CH8      
+  * @arg    #define SYSCFG_TIM5_UP_RMP_DMA2_CH2       
+  * @arg    #define SYSCFG_TIM5_UP_RMP_DMA2_CH6       
+  * @arg    #define SYSCFG_TIM6_UP_RMP_DMA2_CH3       
+  * @arg    #define SYSCFG_TIM6_UP_RMP_DMA2_CH6       
+  * @arg    #define SYSCFG_TIM7_UP_RMP_DMA2_CH4       
+  * @arg    #define SYSCFG_TIM7_UP_RMP_DMA2_CH6       
+  * @arg    #define SYSCFG_TIM8_TRIG_RMP_DMA2_CH2     
+  * @arg    #define SYSCFG_TIM8_TRIG_RMP_DMA2_CH7     
+  * @arg    #define SYSCFG_TIM8_UP_RMP_DMA2_CH1       
+  * @arg    #define SYSCFG_TIM8_UP_RMP_DMA2_CH6       
+  * @arg    #define SYSCFG_TIM8_COM_RMP_DMA2_CH2      
+  * @arg    #define SYSCFG_TIM8_COM_RMP_DMA2_CH8      
+  * @arg    #define SYSCFG_UART4_RX_RMP_DMA2_CH3      
+  * @arg    #define SYSCFG_UART4_RX_RMP_DMA2_CH7      
+  * @arg    #define SYSCFG_UART4_TX_RMP_DMA2_CH5      
+  * @arg    #define SYSCFG_UART4_TX_RMP_DMA2_CH8      
+  * @arg    #define SYSCFG_UART6_RX_RMP_DMA1_CH1      
+  * @arg    #define SYSCFG_UART6_RX_RMP_DMA2_CH6      
+  * @arg    #define SYSCFG_UART6_TX_RMP_DMA2_CH4      
+  * @arg    #define SYSCFG_UART6_TX_RMP_DMA1_CH8      
+  * @arg    #define SYSCFG_UART7_RX_RMP_DMA2_CH1      
+  * @arg    #define SYSCFG_UART7_RX_RMP_DMA2_CH7      
+  * @arg    #define SYSCFG_UART7_TX_RMP_DMA2_CH2      
+  * @arg    #define SYSCFG_UART7_TX_RMP_DMA2_CH8      
+  * @arg    #define SYSCFG_DAC_CH1_RMP_DMA2_CH3       
+  * @arg    #define SYSCFG_DAC_CH1_RMP_DMA2_CH7       
+  * @arg    #define SYSCFG_DAC_CH2_RMP_DMA2_CH4       
+  * @arg    #define SYSCFG_DAC_CH2_RMP_DMA2_CH7       
   * @retval None.
   */
 void SYSCFG_DMARemapConfig(uint8_t perip_dma)

@@ -611,8 +611,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CMSIS\HAL_Lib\Src\hal_usb.c</PathWithFileName>
-      <FilenameWithoutPath>hal_usb.c</FilenameWithoutPath>
+      <PathWithFileName>..\CMSIS\HAL_Lib\Src\hal_usbfs.c</PathWithFileName>
+      <FilenameWithoutPath>hal_usbfs.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

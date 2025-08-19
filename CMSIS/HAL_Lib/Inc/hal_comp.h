@@ -46,6 +46,15 @@
   * @{
   */
 
+
+
+/**
+  * @brief  Select the COMPx
+  */
+#define COMP1       0x01
+#define COMP2       0x02
+#define COMP3       0x03
+
 /**
   * @brief  COMP Init structure definition
   */
@@ -201,17 +210,17 @@ typedef struct
   * @{
   */
 
-void COMP_DeInit(COMP_TypeDef *comp);
+void COMP_DeInit(uint8_t comp_x);
 void COMP_StructInit(COMP_InitTypeDef *init_struct);
-void COMP_Init(COMP_TypeDef *comp, COMP_InitTypeDef *init_struct);
-void COMP_Cmd(COMP_TypeDef *comp, FunctionalState state);
-void COMP_LockConfig(COMP_TypeDef *comp);
-uint32_t COMP_GetOutputLevel(COMP_TypeDef *comp);
+void COMP_Init(uint8_t comp_x, COMP_InitTypeDef *init_struct);
+void COMP_Cmd(uint8_t comp_x, FunctionalState state);
+void COMP_LockConfig(uint8_t comp_x);
+uint32_t COMP_GetOutputLevel(uint8_t comp_x);
 void COMP_SetCrv(uint32_t crv_source, uint32_t crv_level);
 void COMP_CrvCmd(FunctionalState state);
 void COMP_PollStructInit(COMP_POLL_InitTypeDef *init_struct);
-void COMP_PollInit(COMP_TypeDef *comp, COMP_POLL_InitTypeDef *poll_init_struct);
-void COMP_PollCmd(COMP_TypeDef *comp, FunctionalState state);
+void COMP_PollInit(uint8_t comp_x, COMP_POLL_InitTypeDef *poll_init_struct);
+void COMP_PollCmd(uint8_t comp_x, FunctionalState state);
 
 /**
   * @}

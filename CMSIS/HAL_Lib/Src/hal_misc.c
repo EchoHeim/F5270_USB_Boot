@@ -31,15 +31,23 @@
 /* Files includes ------------------------------------------------------------*/
 #include "hal_misc.h"
 
-/** @addtogroup MM32_Hardware_Abstract_Layer
+/** @addtogroup MM32_StdPeriph_Driver
   * @{
   */
 
-/** @addtogroup MSIC_HAL
+/** @addtogroup NVIC
   * @{
   */
 
-/** @addtogroup MISC_Exported_Functions
+/** @defgroup NVIC_Private_Defines
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @defgroup NVIC_Private_Functions
   * @{
   */
 
@@ -74,31 +82,31 @@ void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup)
   */
 void NVIC_Init(NVIC_InitTypeDef *NVIC_InitStruct)
 {
-    uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+    uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x00;
 
     if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
     {
-        /* Compute the Corresponding IRQ Priority --------------------------------*/
-        tmppriority = (((SCB->AIRCR) & (uint32_t)0x700)) >> 0x08;
-        tmppre = 0xff << (tmppriority + 1);
-        tmpsub = ~tmppre;
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
+    tmppriority = ((SCB->AIRCR) & (uint32_t)0x700)>> 0x08;
+    tmppre = tmppriority + 1;
+    tmpsub = 0xFF >> (0x07 - tmppriority);
 
-        tmppriority  = (uint32_t)(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << (tmppriority + 1)) & tmppre;
-        tmppriority |= (NVIC_InitStruct->NVIC_IRQChannelSubPriority << 5) & tmpsub;
-        NVIC->IPR[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
-
-        /* Enable the Selected IRQ Channels --------------------------------------*/
-        NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
-            (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
-    }
-    else
-    {
-        /* Disable the Selected IRQ Channels -------------------------------------*/
-        NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
-            (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
-    }
-
-    tmppre = NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05];
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+    tmppriority = tmppriority << 0x04;
+        
+    NVIC->IPR[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+    
+    /* Enable the Selected IRQ Channels --------------------------------------*/
+    NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+  }
+  else
+  {
+    /* Disable the Selected IRQ Channels -------------------------------------*/
+    NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+  }
 }
 
 /**
@@ -159,4 +167,3 @@ void NVIC_SystemLPConfig(uint8_t low_power_mode, FunctionalState state)
 /**
   * @}
   */
-

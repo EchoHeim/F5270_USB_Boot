@@ -101,11 +101,11 @@ extern "C" {
 /**
   * @brief  SPI bit derection definition
   */
-#define SPI_Disable_Rx                      (0x00U << SPI_GCTL_RXEN_Pos)         /*!< Receive disable */
-#define SPI_Direction_Rx                    (0x01U << SPI_GCTL_RXEN_Pos)         /*!< Receive enable */
+#define SPI_Disable_RX                      (~(0x01U << SPI_GCTL_RXEN_Pos))         /*!< Receive disable */
+#define SPI_Enable_RX                       (0x01U << SPI_GCTL_RXEN_Pos)          /*!< Receive enable */
 
-#define SPI_Disable_Tx                      (0x00U << SPI_GCTL_TXEN_Pos)         /*!< Transmit disable */
-#define SPI_Direction_Tx                    (0x01U << SPI_GCTL_TXEN_Pos)         /*!< Transmit enable */
+#define SPI_Disable_TX                      (~(0x01U << SPI_GCTL_TXEN_Pos))         /*!< Transmit disable */
+#define SPI_Enable_TX                       (0x01U << SPI_GCTL_TXEN_Pos)          /*!< Transmit enable */
 
 /**
   * @brief  SPI flag definition

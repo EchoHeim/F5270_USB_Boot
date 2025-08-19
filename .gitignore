@@ -1,6 +1,10 @@
 # Prerequisites
 *.d
 
+DebugConfig/
+Listings/
+Objects/
+
 # Object files
 *.o
 *.ko

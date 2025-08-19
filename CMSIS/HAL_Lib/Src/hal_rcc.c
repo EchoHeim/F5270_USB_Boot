@@ -567,8 +567,7 @@ void RCC_GetClocksFreq(RCC_ClocksTypeDef *clk)
             clk->SYSCLK_Frequency = HSE_VALUE;
             break;
 
-        case 0x08:                     /* PLL used as system clock */
-            //pll_pdiv = (RCC->PLL1CFGR & RCC_PLL1CFGR_PLL1PDIV_Msk) >> RCC_PLL1CFGR_PLL1PDIV_Pos;
+        case 0x08:                     /* PLL1 used as system clock */
             pll_mul  = (RCC->PLL1CFGR & RCC_PLL1CFGR_PLL1MUL_Msk) >> RCC_PLL1CFGR_PLL1MUL_Pos;
             pll_div  = (RCC->PLL1CFGR & RCC_PLL1CFGR_PLL1DIV_Msk) >> RCC_PLL1CFGR_PLL1DIV_Pos;
 

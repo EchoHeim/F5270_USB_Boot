@@ -331,13 +331,21 @@ void SPI_DataSizeTypeConfig(SPI_TypeDef *spi, uint32_t DataSize)
   */
 void SPI_BiDirectionalLineConfig(SPI_TypeDef *spi, uint32_t direction)
 {
-    if ((direction == SPI_Direction_Rx) || (direction == SPI_Disable_Rx))
+    if (direction == SPI_Enable_RX)
     {
-        MODIFY_REG(spi->GCTL, SPI_GCTL_RXEN_Msk, direction);
+        spi->GCTL |= (0x01U << SPI_GCTL_RXEN_Pos);
     }
-    else if ((direction == SPI_Direction_Tx) || (direction == SPI_Disable_Tx))
+    else if (direction == SPI_Disable_RX)
     {
-        MODIFY_REG(spi->GCTL, SPI_GCTL_TXEN_Msk, direction);
+        spi->GCTL &= ~(0x01U << SPI_GCTL_RXEN_Pos);
+    }
+    else if (direction == SPI_Enable_TX)
+    {
+        spi->GCTL |= (0x01U << SPI_GCTL_TXEN_Pos);
+    }
+    else if (direction == SPI_Disable_TX)
+    {
+        spi->GCTL &= ~(0x01U << SPI_GCTL_TXEN_Pos);
     }
 }
 
@@ -622,7 +630,7 @@ void I2S_Init(SPI_TypeDef *spi, I2S_InitTypeDef *I2S_InitStruct)
   */
 void I2S_CommunicationModeConfig(SPI_TypeDef *spi, uint32_t com_mode)
 {
-    MODIFY_REG(spi->CCTL, SPI_I2SCFGR_HDSEL_Msk, com_mode);
+    MODIFY_REG(spi->I2SCFGR, SPI_I2SCFGR_HDSEL_Msk, com_mode);
 }
 
 /**
@@ -639,7 +647,7 @@ void I2S_CommunicationModeConfig(SPI_TypeDef *spi, uint32_t com_mode)
   */
 void I2S_MCKOutputConfig(SPI_TypeDef *spi, uint32_t output_sel)
 {
-    MODIFY_REG(spi->CCTL, SPI_I2SCFGR_MCKSEL_Msk, output_sel);
+    MODIFY_REG(spi->I2SCFGR, SPI_I2SCFGR_MCKSEL_Msk, output_sel);
 }
 
 /**

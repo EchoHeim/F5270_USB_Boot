@@ -130,23 +130,6 @@ static uint32_t blink_interval_ms = BLINK_NOT_MOUNTED;
 
 void led_blinking_task(void);
 
-void USB_DeviceClockInit(void)
-{
-    RCC->PLL2CFGR = (1 << 0)    /* (pllsrc == 1) ? HSE : HSI. */
-                    | (7 << 16) /* (12 * (7 + 1)) / 2 = 48. */
-                    | (1 << 8) | (1 << 4) | (3 << 2);
-
-    RCC->CR |= RCC_CR_PLL2ON_Msk;
-    while ((RCC->CR & RCC_CR_PLL2RDY_Msk) == 0)
-        ;
-
-    RCC->CFGR &= ~(3 << 22);
-    RCC->CFGR |= 1 << 19;
-
-    /* USB. */
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_USB_FS, ENABLE);
-}
-
 /*------------- MAIN -------------*/
 int main(void)
 {

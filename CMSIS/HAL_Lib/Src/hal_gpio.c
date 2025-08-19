@@ -327,6 +327,22 @@ void GPIO_PinAFConfig(GPIO_TypeDef *gpio, uint8_t pin, uint8_t alternate_functio
 }
 
 /**
+  * @brief  Configure the pull-up or pull-down of the GPIO port in open-drain output mode.
+  * @param  gpio: to select the GPIO peripheral.
+  * @param  pin: This parameter can be one of GPIO_Pin_x where x can be (0..15).
+  * @param  od_mode: Specifies the pull-up and pull-down modes for the port.
+  *         This parameter can be one of the following values:
+  * @arg   GPIO_OD_NoPull  
+  * @arg   GPIO_OD_PullDown
+  * @arg   GPIO_OD_PullUp
+  * @retval None.
+  */
+void GPIO_PinODConfig(GPIO_TypeDef *gpio, uint16_t pin, uint32_t od_mode)
+{
+    MODIFY_REG(gpio->DCR, GPIO_DCR_PX0_Msk << (pin * 2), od_mode << (pin * 2));
+}
+
+/**
   * @}
   */
 

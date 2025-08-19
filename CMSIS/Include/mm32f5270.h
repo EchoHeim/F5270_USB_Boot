@@ -31,55 +31,59 @@
 #ifndef __MM32F5270_H
 #define __MM32F5270_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#if defined(__CC_ARM)
+#pragma anon_unions
+#elif defined(__ICCARM__)
+#pragma language=extended
+#elif defined(__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+#pragma clang diagnostic ignored "-Wc11-extensions"
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+#elif defined(__GNUC__)
+/* anonymous unions are enabled by default -----------------------------------*/
+#else
+#warning Not supported compiler type
+#endif
+
 extern void SystemInit(void);
 
-/* MM32 Library version is V1.0 --------------------------------------------*/
+
+/* MM32 Library version is V1.5 --------------------------------------------*/
 
 #define __MM32_LIB_VERSION_MAIN                 (0x01U) /*!< [15:8] main version */
-#define __MM32_LIB_VERSION_SUB                  (0x00U) /*!< [7:0]  sub version */
+#define __MM32_LIB_VERSION_SUB                  (0x05U) /*!< [7:0]  sub version */
 #define __MM32_LIB_VERSION               \
         ((__MM32_LIB_VERSION_MAIN << 8U) \
          | (__MM32_LIB_VERSION_SUB << 0U))
 
-/* MM32 Library release date is 2023-07-12 -----------------------------------*/
+/* MM32 Library release date is 2024-12-20 -----------------------------------*/
 #define __MM32_LIB_RELESE_YEARH                 (0x20U) /*!< [31:24] release year high */
-#define __MM32_LIB_RELESE_YEARL                 (0x23U) /*!< [23:16] release year low */
-#define __MM32_LIB_RELESE_MONTH                 (0x07U) /*!< [15:8]  release month */
-#define __MM32_LIB_RELESE_DAY                   (0x12U) /*!< [7:0]   release day */
+#define __MM32_LIB_RELESE_YEARL                 (0x24U) /*!< [23:16] release year low */
+#define __MM32_LIB_RELESE_MONTH                 (0x12U) /*!< [15:8]  release month */
+#define __MM32_LIB_RELESE_DAY                   (0x20U) /*!< [7:0]   release day */
 #define __MM32_LIB_RELESE_DATE              \
         ((__MM32_LIB_RELESE_YEARH << 24U)   \
          | (__MM32_LIB_RELESE_YEARL << 16U) \
          | (__MM32_LIB_RELESE_MONTH << 8U)  \
          | (__MM32_LIB_RELESE_DAY << 0U))
 
-#ifndef HSE_STARTUP_TIMEOUT
-#define HSE_STARTUP_TIMEOUT                     (0x0500U) /*!< Time out for HSE start up. */
-#endif
+#define HSI_STARTUP_TIMEOUT                     (0x8000U) /*!< Time out for HSI start up. */
+#define HSE_STARTUP_TIMEOUT                     (0x8000U) /*!< Time out for HSE start up. */
+
+
 #ifdef  CUSTOM_HSE_VAL
-#ifndef HSE_VALUE
 #define HSE_VALUE                               (12000000U) /*!< Value of the External oscillator in Hz. */
-#endif
 #else
-#ifndef HSE_VALUE
 #define HSE_VALUE                               (8000000U) /*!< Value of the External oscillator in Hz. */
 #endif
-#endif
 
-#ifndef LSE_VALUE
 #define LSE_VALUE                               (32768U)        /*!< Value of the External low oscillator in Hz. */
-#endif
-
-#define HSI_VALUE_PLL_ON                        (48000000U / 6) /*!< Value of the Internal oscillator in Hz. */
-#define HSI_DIV6                                (48000000U / 6) /*!< Value of the Internal oscillator in Hz. */
-
-/* Value of the Internal oscillator in Hz.------------------------------------*/
-#ifndef LSI_VALUE
+#define HSI_VALUE                               (8000000U) /*!< Value of the Internal oscillator in Hz. */
 #define LSI_VALUE                               (40000U) /*!< Value of the Internal oscillator in Hz. */
-#endif
 
-#ifndef HSI_VALUE
-#define HSI_VALUE                               HSI_DIV6
-#endif
 
 /**
   * @brief Configuration of the Cortex-Star Processor and Core Peripherals
@@ -91,9 +95,10 @@ extern void SystemInit(void);
 #define __MPU_PRESENT                           (1U) /*!< star MC1 provides an MPU                      */
 #define __ICACHE_PRESENT                        (1U) /*!< star MC1 instruction cache present            */
 #define __DCACHE_PRESENT                        (1U) /*!< star MC1 data cache present                   */
-#define __DTCM_PRESENT                          (1U)
-#define __NVIC_PRIO_BITS                        (4U) /*!< Cortex-M0 uses 2 Bits for the Priority Levels */
+#define __DTCM_PRESENT                          (0U)
+#define __NVIC_PRIO_BITS                        (4U) 
 #define __Vendor_SysTickConfig                  (0U) /*!< Set to 1 if different SysTick Config is used  */
+
 
 /**
   * @brief  MM32 MCU Interrupt Handle
@@ -115,7 +120,7 @@ typedef enum IRQn
     BKP_TAMPER_IRQn             = 2,   /*!< BKP tamper Interrupt                                 */
     RTC_IRQn                    = 3,   /*!< RTC global Interrupt                                 */
     FLASH_IRQn                  = 4,   /*!< FLASH global Interrupt                               */
-    RCC_CRS_IRQn                = 5,   /*!< RCC global Interrupt                                 */
+    RCC_CRS_IRQn                = 5,   /*!< RCC and CRS global Interrupt                         */
     EXTI0_IRQn                  = 6,   /*!< EXTI Line0 Interrupt                                 */
     EXTI1_IRQn                  = 7,   /*!< EXTI Line1 Interrupt                                 */
     EXTI2_IRQn                  = 8,   /*!< EXTI Line2 Interrupt                                 */
@@ -332,5 +337,10 @@ typedef enum
   * @}
   */
 
+#ifdef __cplusplus
+}
 #endif
 
+/** --------------------------------------------------------------------------*/
+#endif
+/** --------------------------------------------------------------------------*/

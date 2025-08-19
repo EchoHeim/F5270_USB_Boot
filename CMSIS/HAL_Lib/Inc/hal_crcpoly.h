@@ -46,17 +46,6 @@
   * @{
   */
 
-/**
-  * @}
-  */
-
-/** @defgroup CRCPOLY_Exported_Constants
-  * @{
-  */
-
-/**
-  * @}
-  */
 
 #define CRCPOLY_POLYLENGTH_32B      (0x00U << CRCPOLY_CR_PWIDTH_Pos)
 #define CRCPOLY_POLYLENGTH_16B      (0x01U << CRCPOLY_CR_PWIDTH_Pos)
@@ -73,6 +62,12 @@
 
 #define CRCPOLY_OUT_LITTLE_ENDIAN   (0x00U << CRCPOLY_CR_BEO_Pos)
 #define CRCPOLY_OUT_BIG_ENDIAN      (0x01U << CRCPOLY_CR_BEO_Pos)
+
+
+/**
+  * @}
+  */
+
 
 /** @defgroup CRCPOLY_Exported_Functions
   * @{

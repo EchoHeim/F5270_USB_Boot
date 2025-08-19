@@ -1693,7 +1693,7 @@ FlagStatus TIM_GetFlagStatus(TIM_TypeDef *tim, uint32_t flag)
   */
 void TIM_ClearFlag(TIM_TypeDef *tim, uint32_t flag)
 {
-    tim->SR &= ~flag;
+    tim->SR = ~flag;
 }
 
 /**
@@ -1733,7 +1733,7 @@ ITStatus TIM_GetITStatus(TIM_TypeDef *tim, uint32_t it)
   */
 void TIM_ClearITPendingBit(TIM_TypeDef *tim, uint32_t it)
 {
-    tim->SR &= ~it;
+    tim->SR = ~it;
 }
 
 /**
@@ -1856,20 +1856,7 @@ FlagStatus TIM_GetCountDirection(TIM_TypeDef *tim)
   */
 void TIM_BreakInputFilterConfig(TIM_TypeDef *tim, uint32_t source, uint32_t filter)
 {
-    if (source & TIM_BKINF_COMPBKIN_SEL_Msk)
-    {
-        MODIFY_REG(tim->BKINF, TIM_BKINF_COMPBKIN_SEL_Msk, source);
-    }
-
-    if (source & TIM_BKINF_IOBKIN_SEL_Msk)
-    {
-        MODIFY_REG(tim->BKINF, TIM_BKINF_IOBKIN_SEL_Msk, source);
-    }
-
-    if (source & TIM_BKINF_CSSBKIN_SEL_Msk)
-    {
-        MODIFY_REG(tim->BKINF, TIM_BKINF_CSSBKIN_SEL_Msk, source);
-    }
+    tim->BKINF |= source;
 
     MODIFY_REG(tim->BKINF, TIM_BKINF_BKINF_Msk, filter);
 }

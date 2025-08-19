@@ -44,26 +44,23 @@
 
 typedef struct
 {
-    __IO uint32_t COMPx_CSR;           /*!< COMP Control Status Register  */
-    __IO uint32_t RESERVED[3];
-    __IO uint32_t COMPx_POLL;          /*!< COMP polling register         */
+    __IO uint32_t RESERVED0x00[3];    /*!<                                               offset: 0x00~0x08*/
+    __IO uint32_t COMP1CSR;           /*!<COMP1 control status register                  offset: 0x0C*/
+    __IO uint32_t COMP2CSR;           /*!<COMP2 control status register                  offset: 0x10*/
+    __IO uint32_t RESERVED0x14[1];    /*!<                                               offset: 0x14*/
+    __IO uint32_t CRV;                /*!<COMP CRV Register                              offset: 0x18*/
+    __IO uint32_t COMP1POLL;          /*!<COMP1 polling register                         offset: 0x1C*/
+    __IO uint32_t COMP2POLL;          /*!<COMP2 polling register                         offset: 0x20*/
+    __IO uint32_t COMP3POLL;          /*!<COMP3 polling register                         offset: 0x24*/
+    __IO uint32_t RESERVED0x28[2];    /*!<                                               offset: 0x28~0x2C*/
+    __IO uint32_t COMP3CSR;           /*!<COMP3 control status register                  offset: 0x30*/
 } COMP_TypeDef;
-
-typedef struct
-{
-    __IO uint32_t COMPx_POLL;          /*!< COMP polling register         */
-    __IO uint32_t RESERVED[2];
-    __IO uint32_t COMPx_CSR;           /*!< COMP Control Status Register  */
-} COMP3_TypeDef;
 
 /**
   * @brief COMP type pointer Definition
   */
-#define COMP1                                     ((COMP_TypeDef *)(COMP_BASE + 0x0C))
-#define COMP2                                     ((COMP_TypeDef *)(COMP_BASE + 0x10))
-#define COMP3                                     ((COMP3_TypeDef *)(COMP_BASE + 0x24))
+#define COMP                          ((COMP_TypeDef *)COMP_BASE)
 
-#define COMP_CRV                                  ((__IO uint32_t *)(COMP_BASE + 0x18))
 /**
   * @brief COMP_CSR Register Bit Definition
   */

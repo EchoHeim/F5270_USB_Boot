@@ -565,9 +565,9 @@
               <FilePath>..\CMSIS\HAL_Lib\Src\hal_uid.c</FilePath>
             </File>
             <File>
-              <FileName>hal_usb.c</FileName>
+              <FileName>hal_usbfs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\CMSIS\HAL_Lib\Src\hal_usb.c</FilePath>
+              <FilePath>..\CMSIS\HAL_Lib\Src\hal_usbfs.c</FilePath>
             </File>
             <File>
               <FileName>hal_wwdg.c</FileName>

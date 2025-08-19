@@ -294,6 +294,9 @@ void PWR_EnterSLEEPMode(uint32_t regulator, uint32_t sleep_entry)
   */
 void PWR_EnterSTOPMode(uint32_t stop_mode, uint32_t stop_entry)
 {
+    uint32_t tmpreg1 = 0;
+    uint32_t tmpreg2 = 0;
+	
     if (stop_mode == PWR_MODE_STOP)
     {
         PWR->CR1 &= ~(0x01U << PWR_CR1_LPDS_Pos);
@@ -305,6 +308,18 @@ void PWR_EnterSTOPMode(uint32_t stop_mode, uint32_t stop_entry)
         PWR->CR1 |= (0x01U << PWR_CR1_LPDS_Pos);
         SCB->SCR |= (0x01U << SCB_SCR_SLEEPDEEP_Pos);
     }
+	
+    tmpreg1 = RCC->CFGR;
+    tmpreg2 = FLASH->ACR;
+
+    /* To ensure that the instruction is deterministic after awakening, turn off the prefetch function before stop. */
+    RCC->CFGR &= ~(RCC_CFGR_HPRE_Msk | RCC_CFGR_SW_Msk);
+    FLASH->ACR &= ~FLASH_ACR_LATENCY_Msk;
+
+    FLASH->ACR &= ~FLASH_ACR_PRFTBE_Msk;
+    while((FLASH->ACR & FLASH_ACR_PRFTBS_Msk) != 0)
+    {
+    }   
 
     if (stop_entry == PWR_STOPEntry_WFI)
     {
@@ -318,6 +333,10 @@ void PWR_EnterSTOPMode(uint32_t stop_mode, uint32_t stop_entry)
     }
 
     SCB->SCR &= ~(0x01U << SCB_SCR_SLEEPDEEP_Pos);
+	
+    FLASH->ACR = tmpreg2 & FLASH_ACR_PRFTBE_Msk;
+    FLASH->ACR = tmpreg2;
+    RCC->CFGR = tmpreg1 & 0xFFFFFFF0;
 }
 
 /**

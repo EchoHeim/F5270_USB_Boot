@@ -38,4 +38,6 @@ extern const u8 Valid_buf[4];
 void boot_protocol(u8 *buff, u16 len);
 void FLASH_Read(u8 *buff, u32 addr, u32 readNumber);
 
+void USB_DeviceClockInit(void);
+
 #endif

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,CUSTOM_HSE_VAL,APP_TINYUSB,CFG_TUSB_MCU</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\tinyUSB;..\tinyUSB\class\hid;..\tinyUSB\common;..\tinyUSB\device;..\CMSIS;..\CMSIS\Include;..\CMSIS\HAL_Lib\Inc</IncludePath>
+              <IncludePath>..\tinyUSB;..\tinyUSB\class\hid;..\tinyUSB\common;..\tinyUSB\device;..\CMSIS;..\CMSIS\Include;..\CMSIS\HAL_Lib\Inc;..\App_boot</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -381,41 +381,6 @@
         </TargetArmAds>
       </TargetOption>
       <Groups>
-        <Group>
-          <GroupName>USER</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>mm32f5270_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\mm32f5270_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>platform.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\platform.c</FilePath>
-            </File>
-            <File>
-              <FileName>tud_dcd_port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\tud_dcd_port.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_descriptors.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\usb_descriptors.c</FilePath>
-            </File>
-            <File>
-              <FileName>boot.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\boot.c</FilePath>
-            </File>
-          </Files>
-        </Group>
         <Group>
           <GroupName>STARTUP</GroupName>
           <Files>
@@ -615,14 +580,49 @@
               <FilePath>..\CMSIS\HAL_Lib\Src\hal_uid.c</FilePath>
             </File>
             <File>
-              <FileName>hal_usb.c</FileName>
+              <FileName>hal_usbfs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\CMSIS\HAL_Lib\Src\hal_usb.c</FilePath>
+              <FilePath>..\CMSIS\HAL_Lib\Src\hal_usbfs.c</FilePath>
             </File>
             <File>
               <FileName>hal_wwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\CMSIS\HAL_Lib\Src\hal_wwdg.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>App_boot</GroupName>
+          <Files>
+            <File>
+              <FileName>boot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\boot.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>mm32f5270_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\mm32f5270_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\platform.c</FilePath>
+            </File>
+            <File>
+              <FileName>tud_dcd_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\tud_dcd_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_descriptors.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_boot\usb_descriptors.c</FilePath>
             </File>
           </Files>
         </Group>

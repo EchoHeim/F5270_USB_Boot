@@ -50,8 +50,8 @@
   */
 void CRCPOLY_DeInit(void)
 {
-    RCC->AHBRSTR |= (0x01U << RCC_AHBRSTR_CRC_Pos);
-    RCC->AHBRSTR &= ~(0x01U << RCC_AHBRSTR_CRC_Pos);
+    RCC_AHBPeriphResetCmd(RCC_AHBPeriph_CRC, ENABLE);
+    RCC_AHBPeriphResetCmd(RCC_AHBPeriph_CRC, DISABLE);
 }
 
 /**

@@ -145,7 +145,7 @@ FlagStatus WWDG_GetFlagStatus(void)
   */
 void WWDG_ClearFlag(void)
 {
-    WWDG->SR &= ~(0x01U << WWDG_SR_EWIF_Pos);
+    WWDG->SR = ~(0x01U << WWDG_SR_EWIF_Pos);
 }
 
 /**

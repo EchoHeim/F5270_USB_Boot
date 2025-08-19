@@ -57,6 +57,9 @@ extern "C" {
 #define EXTI_PortSourceGPIOB                   ((uint8_t)0x01)
 #define EXTI_PortSourceGPIOC                   ((uint8_t)0x02)
 #define EXTI_PortSourceGPIOD                   ((uint8_t)0x03)
+#define EXTI_PortSourceGPIOE                   ((uint8_t)0x04)
+#define EXTI_PortSourceGPIOF                   ((uint8_t)0x05)
+#define EXTI_PortSourceGPIOG                   ((uint8_t)0x06)
 #define EXTI_PortSourceGPIOH                   ((uint8_t)0x07)
 #define EXTI_PortSourceGPIOI                   ((uint8_t)0x08)
 
@@ -162,20 +165,23 @@ extern "C" {
 #define SYSCFG_UART4_TX_RMP_DMA2_CH5           ((0x00 << 5U) | SYSCFG_DMARMP_UART4_TX_RMP_Pos)
 #define SYSCFG_UART4_TX_RMP_DMA2_CH8           ((0x01 << 5U) | SYSCFG_DMARMP_UART4_TX_RMP_Pos)
 
-#define SYSCFG_I3C1_RX_RMP_DMA2_CH5            ((0x00 << 5U) | SYSCFG_DMARMP_I3C1_RX_RMP_Pos)
-#define SYSCFG_I3C1_RX_RMP_DMA2_CH8            ((0x01 << 5U) | SYSCFG_DMARMP_I3C1_RX_RMP_Pos)
+#define SYSCFG_UART6_RX_RMP_DMA1_CH1           ((0x00 << 5U) | SYSCFG_DMARMP_UART6_RX_RMP_Pos)
+#define SYSCFG_UART6_RX_RMP_DMA2_CH6           ((0x01 << 5U) | SYSCFG_DMARMP_UART6_RX_RMP_Pos)
 
-#define SYSCFG_I3C1_TX_RMP_DMA2_CH4            ((0x00 << 5U) | SYSCFG_DMARMP_I3C1_TX_RMP_Pos)
-#define SYSCFG_I3C1_TX_RMP_DMA2_CH7            ((0x01 << 5U) | SYSCFG_DMARMP_I3C1_TX_RMP_Pos)
+#define SYSCFG_UART6_TX_RMP_DMA2_CH4           ((0x00 << 5U) | SYSCFG_DMARMP_UART6_TX_RMP_Pos)
+#define SYSCFG_UART6_TX_RMP_DMA1_CH8           ((0x01 << 5U) | SYSCFG_DMARMP_UART6_TX_RMP_Pos)
+
+#define SYSCFG_UART7_RX_RMP_DMA2_CH1           ((0x00 << 5U) | SYSCFG_DMARMP_UART7_RX_RMP_Pos)
+#define SYSCFG_UART7_RX_RMP_DMA2_CH7           ((0x01 << 5U) | SYSCFG_DMARMP_UART7_RX_RMP_Pos)
+
+#define SYSCFG_UART7_TX_RMP_DMA2_CH2           ((0x00 << 5U) | SYSCFG_DMARMP_UART7_TX_RMP_Pos)
+#define SYSCFG_UART7_TX_RMP_DMA2_CH8           ((0x01 << 5U) | SYSCFG_DMARMP_UART7_TX_RMP_Pos)
 
 #define SYSCFG_DAC_CH1_RMP_DMA2_CH3            ((0x00 << 5U) | SYSCFG_DMARMP_DAC_CH1_RMP_Pos)
 #define SYSCFG_DAC_CH1_RMP_DMA2_CH7            ((0x01 << 5U) | SYSCFG_DMARMP_DAC_CH1_RMP_Pos)
 
-#define SYSCFG_ADC1_RMP_DMA1_CH1               ((0x00 << 5U) | SYSCFG_DMARMP_ADC1_RMP_Pos)
-#define SYSCFG_ADC1_RMP_DMA2_CH6               ((0x01 << 5U) | SYSCFG_DMARMP_ADC1_RMP_Pos)
-
-#define SYSCFG_ADC2_RMP_DMA1_CH2               ((0x00 << 5U) | SYSCFG_DMARMP_ADC2_RMP_Pos)
-#define SYSCFG_ADC2_RMP_DMA2_CH8               ((0x01 << 5U) | SYSCFG_DMARMP_ADC2_RMP_Pos)
+#define SYSCFG_DAC_CH2_RMP_DMA2_CH4            ((0x00 << 5U) | SYSCFG_DMARMP_DAC_CH2_RMP_Pos)
+#define SYSCFG_DAC_CH2_RMP_DMA2_CH7            ((0x01 << 5U) | SYSCFG_DMARMP_DAC_CH2_RMP_Pos)
 
 /**
   * @brief Bus_Priority_Config
@@ -217,4 +223,3 @@ void SYSCFG_BusPriorityConfig(uint16_t mx, uint8_t pri);
 /**
   * @}
   */
-

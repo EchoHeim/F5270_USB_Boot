@@ -154,6 +154,13 @@ typedef struct
 #define GPIO_PinSource15                (0x0FU)
 
 /**
+  * @brief  The port pull-up or pull-down mode
+  */
+#define GPIO_OD_NoPull                  0x00
+#define GPIO_OD_PullDown                0x01
+#define GPIO_OD_PullUp                  0x03
+
+/**
   * @}
   */
 
@@ -182,6 +189,7 @@ void GPIO_WriteBit(GPIO_TypeDef *gpio, uint16_t pin, BitAction value);
 void GPIO_Write(GPIO_TypeDef *gpio, uint16_t value);
 void GPIO_PinLockConfig(GPIO_TypeDef *gpio, uint16_t pin, uint16_t lock);
 void GPIO_PinAFConfig(GPIO_TypeDef *gpio, uint8_t pin, uint8_t alternate_function);
+void GPIO_PinODConfig(GPIO_TypeDef *gpio, uint16_t pin, uint32_t od_mode);
 
 /**
   * @}

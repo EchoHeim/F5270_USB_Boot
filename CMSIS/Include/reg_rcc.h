@@ -56,7 +56,7 @@ typedef struct
     __IO uint32_t APB1ENR;             /*!<RCC APB1 Peripheral Clock Enable Register      offset: 0x30*/
     __IO uint32_t BDCR;                /*!<RCC Backup Domain Control Register             offset: 0x34*/
     __IO uint32_t CSR;                 /*!<RCC Control Status Register                    offset: 0x38*/
-    __IO uint32_t SYSCFG;              /*!<RCC System Configuration Register              offset: 0x3C*/
+    __IO uint32_t SYSCFGR;             /*!<RCC System Configuration Register              offset: 0x3C*/
     __IO uint32_t CFGR2;               /*!<RCC Clock Configuration Register 2             offset: 0x40*/
     __IO uint32_t ICSCR;               /*!<RCC Internal Clock Source Calibration Register offset: 0x44*/
     __IO uint32_t PLL1CFGR;            /*!<RCC PLL1 Configuration Register                offset: 0x48*/
@@ -104,10 +104,10 @@ typedef struct
 #define  RCC_CR_HSEBYP_Msk                        (0x01U << RCC_CR_HSEBYP_Pos)              /*!<*/
 #define  RCC_CR_CSSON_Pos                         (19)
 #define  RCC_CR_CSSON_Msk                         (0x01U << RCC_CR_CSSON_Pos)               /*!<*/
-#define  RCC_CR_HSE_AACSELHSEAACSEL_Pos           (21)
-#define  RCC_CR_HSE_AACSELHSEAACSEL_Msk           (0x01U << RCC_CR_HSE_AACSELHSEAACSEL_Pos) /*!<*/
-#define  RCC_CR_HSE_IBHSEIB_Pos                   (22)
-#define  RCC_CR_HSE_IBHSEIB_Msk                   (0x03U << RCC_CR_HSE_IBHSEIB_Pos)         /*!<*/
+#define  RCC_CR_HSEAACSEL_Pos                     (21)
+#define  RCC_CR_HSEAACSEL_Msk                     (0x01U << RCC_CR_HSEAACSEL_Pos)           /*!<*/
+#define  RCC_CR_HSEIB_Pos                         (22)
+#define  RCC_CR_HSEIB_Msk                         (0x03U << RCC_CR_HSEIB_Pos)               /*!<*/
 #define  RCC_CR_PLL1ON_Pos                        (24)
 #define  RCC_CR_PLL1ON_Msk                        (0x01U << RCC_CR_PLL1ON_Pos)              /*!<*/
 #define  RCC_CR_PLL1RDY_Pos                       (25)

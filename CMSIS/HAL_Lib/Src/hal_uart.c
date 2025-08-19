@@ -123,7 +123,7 @@ void UART_Init(UART_TypeDef *uart, UART_InitTypeDef *init_struct)
 
     /* UART BRR Configuration */
     /* Configure the UART Baud Rate */
-    if (uart == UART1)
+    if ((uart == UART1) || (uart == UART6))
     {
         apbclock = RCC_ClocksStatus.PCLK2_Frequency;
     }
