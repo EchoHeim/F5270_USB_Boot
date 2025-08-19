@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "platform.h": "c",
+        "gpio_led_toggle.h": "c"
+    }
+}
