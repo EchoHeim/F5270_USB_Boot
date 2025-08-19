@@ -29,8 +29,7 @@
 /* Define to prevent recursive inclusion */
 #define _MM32F5270_IT_C_
 
-/* Files include */
-#include "platform.h"
+/* Files include */ 
 #include "mm32f5270_it.h"
 
 /**

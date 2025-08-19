@@ -155,7 +155,6 @@ int main(void)
     PLATFORM_InitConsole(115200);
     PLATFORM_InitLED();
 
-    // board_init();
     USB_DeviceClockInit();
     // init device stack on configured roothub port
     tud_init(BOARD_TUD_RHPORT);

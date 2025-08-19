@@ -33,136 +33,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "platform.h"
 
 #include "board_api.h"
 #include "tusb.h"
-#include "tinyusb_host_cdc_msc_hid.h"
-/**
-  * @addtogroup MM32F5270_TinyUSB
-  * @{
-  */
-
-/**
-  * @addtogroup TinyUSB_Host
-  * @{
-  */
-
-/**
-  * @addtogroup TinyUSB_Host_CDC_MSC_HID
-  * @{
-  */
-
-/* Private typedef ****************************************************************************************************/
-
-/* Private define *****************************************************************************************************/
-
-/* Private macro ******************************************************************************************************/
-
-/* Private variables **************************************************************************************************/
-//------------- prototypes -------------//
-void led_blinking_task(void);
-
-extern void cdc_app_task(void);
-extern void hid_app_task(void);
-
-/* Private functions **************************************************************************************************/
 /***********************************************************************************************************************
-  * @brief TinyUSB Host Configure
-  * @note   none
-  * @param  none
-  * @retval none
-  *********************************************************************************************************************/
-void TinyUSB_Host_Configure(void)
-{
-    USB_HostClockInit();
-
-    // init host stack on configured roothub port
-    tuh_init(BOARD_TUH_RHPORT);
-}
-
-/***********************************************************************************************************************
-  * @brief  TinyUSB Device Dual CDC Sample.
-  * @note   none
-  * @param  none
-  * @retval none
-  *********************************************************************************************************************/
-void TinyUSB_Host_CDC_MSC_HID_Sample(void)
-{
-    printf("\r\nTest %s\r\n", __FUNCTION__);
-
-    TinyUSB_Host_Configure();
-
-    if (board_init_after_tusb) {
-    board_init_after_tusb();
-    }
-
-    while (1)
-    {
-        // tinyusb host task
-        tuh_task();
-
-        led_blinking_task();
-        cdc_app_task();
-        hid_app_task();
-    }
-}
-
-/***********************************************************************************************************************
-  * @brief  TinyUSB Mount Callbacks.
-  * @note   none
-  * @param  dev_addr: device address.
-  * @retval none
-  *********************************************************************************************************************/
+ * @brief  TinyUSB Mount Callbacks.
+ * @note   none
+ * @param  dev_addr: device address.
+ * @retval none
+ *********************************************************************************************************************/
 void tuh_mount_cb(uint8_t dev_addr)
 {
-  // application set-up
-  printf("A device with address %d is mounted\r\n", dev_addr);
+    // application set-up
+    printf("A device with address %d is mounted\r\n", dev_addr);
 }
 
 /***********************************************************************************************************************
-  * @brief  TinyUSB Umount Callbacks.
-  * @note   none
-  * @param  dev_addr: device address.
-  * @retval none
-  *********************************************************************************************************************/
+ * @brief  TinyUSB Umount Callbacks.
+ * @note   none
+ * @param  dev_addr: device address.
+ * @retval none
+ *********************************************************************************************************************/
 void tuh_umount_cb(uint8_t dev_addr)
 {
-  // application tear-down
-  printf("A device with address %d is unmounted \r\n", dev_addr);
+    // application tear-down
+    printf("A device with address %d is unmounted \r\n", dev_addr);
 }
-
-/***********************************************************************************************************************
-  * @brief  TinyUSB Blinking Task.
-  * @note   none
-  * @param  none
-  * @retval none
-  *********************************************************************************************************************/
-void led_blinking_task(void)
-{
-  const uint32_t interval_ms = 1000;
-  static uint32_t start_ms = 0;
-
-  static bool led_state = false;
-
-  // Blink every interval ms
-  if ( board_millis() - start_ms < interval_ms) return; // not enough time
-  start_ms += interval_ms;
-
-  board_led_write(led_state);
-  led_state = 1 - led_state; // toggle
-}
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
 
 /********************************************** (C) Copyright MindMotion **********************************************/

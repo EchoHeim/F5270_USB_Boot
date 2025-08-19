@@ -7,23 +7,23 @@
 
   <Targets>
     <Target>
-      <TargetName>TinyUSB_Host_CDC_MSC_HID</TargetName>
+      <TargetName>TinyUSB_Host</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
-          <Device>MM32F5277E7PV</Device>
+          <Device>MM32F5277E9PV</Device>
           <Vendor>MindMotion</Vendor>
           <PackID>MindMotion.MM32F5277E_DFP.1.3.0</PackID>
           <PackURL>http://www.mindmotion.com.cn/Download/MDK_KEIL/</PackURL>
           <Cpu>IRAM(0x30000000,0x1C000) IROM(0x08000000,0x40000) CPUTYPE("Star-MC1") FPU3(SFPU) DSP CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2V8M(-S0 -C0 -P0 -FD30000000 -FC1000 -FN2 -FF0MM32F5270_256 -FS08000000 -FL040000 -FF1MM32F5270_QSPI_Flash -FS190000000 -FL11000000 -FP0($$Device:MM32F5277E7PV$Flash\MM32F5270_256.FLM) -FP1($$Device:MM32F5277E7PV$Flash\MM32F5270_QSPI_Flash.FLM))</FlashDriverDll>
+          <FlashDriverDll>UL2V8M(-S0 -C0 -P0 -FD30000000 -FC1000 -FN2 -FF0MM32F5270_256 -FS08000000 -FL040000 -FF1MM32F5270_QSPI_Flash -FS190000000 -FL11000000 -FP0($$Device:MM32F5277E9PV$Flash\MM32F5270_256.FLM) -FP1($$Device:MM32F5277E9PV$Flash\MM32F5270_QSPI_Flash.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
-          <RegisterFile>$$Device:MM32F5277E7PV$Device\MM32F5277E\hal_device_registers.h</RegisterFile>
+          <RegisterFile>$$Device:MM32F5277E9PV$Device\MM32F5277E\hal_device_registers.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:MM32F5277E7PV$SVD\MM32F5277E.svd</SFDFile>
+          <SFDFile>$$Device:MM32F5277E9PV$SVD\MM32F5277E.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>TinyUSB_Host_CDC_MSC_HID</OutputName>
+          <OutputName>USB_Host</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -329,10 +329,10 @@
             <uC99>1</uC99>
             <uGnu>1</uGnu>
             <useXO>0</useXO>
-            <v6Lang>3</v6Lang>
-            <v6LangP>5</v6LangP>
-            <vShortEn>1</vShortEn>
-            <vShortWch>1</vShortWch>
+            <v6Lang>5</v6Lang>
+            <v6LangP>3</v6LangP>
+            <vShortEn>0</vShortEn>
+            <vShortWch>0</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
@@ -408,11 +408,6 @@
               <FileName>msc_app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\USB_Host\msc_app.c</FilePath>
-            </File>
-            <File>
-              <FileName>platform.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB_Host\platform.c</FilePath>
             </File>
             <File>
               <FileName>tinyusb_host_cdc_msc_hid.c</FileName>
