@@ -1,22 +1,21 @@
 Dependencies for Project 'tinyUSB_CHID', Target 'tinyUSB': (DO NOT MODIFY !)
 CompilerVersion: 6230000::V6.23::ARMCLANG
 F (..\USER\main.c)(0x68A3C549)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/main.o -MMD)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
 I (..\USER\platform.h)(0x68A2E99F)
 I (..\CMSIS\HAL_Lib\Inc\hal_conf.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_adc.h)(0x6615147C)
@@ -220,19 +219,18 @@ I (..\CMSIS\HAL_Lib\Inc\hal_uart.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_uid.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_wwdg.h)(0x6615147C)
 F (..\USER\tud_dcd_port.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/tud_dcd_port.o -MMD)
-I (..\tinyUSB\device\dcd.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\device\dcd.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
 I (..\CMSIS\HAL_Lib\Inc\hal_usb.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_common.h)(0x68A3DCE3)
 I (..\USER\mm32f5277e.h)(0x68A2D1C5)
@@ -240,27 +238,26 @@ I (..\CMSIS\core_starmc1.h)(0x6615147C)
 I (..\CMSIS\mm32f5277e_features.h)(0x68A3DCDC)
 I (..\CMSIS\system_mm32f5277e.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_usb_bdt.h)(0x6615147C)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
 F (..\USER\usb_descriptors.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/usb_descriptors.o -MMD)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
 F (..\USER\boot.c)(0x68A3CEA6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/boot.o -MMD)
 I (..\USER\boot.h)(0x68A2E9BB)
 I (..\USER\platform.h)(0x68A2E99F)
@@ -329,17 +326,16 @@ I (..\CMSIS\HAL_Lib\Inc\hal_tim.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_uart.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_uid.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_wwdg.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
 F (..\CMSIS\startup_mm32f5270_keil.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/startup_mm32f5270_keil.o -MMD)
 I (..\CMSIS\Include\mm32_device.h)(0x6615147C)
 I (..\CMSIS\Include\mm32f5270.h)(0x6615147C)
@@ -472,94 +468,89 @@ I (..\CMSIS\HAL_Lib\Inc\hal_tim.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_uart.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_uid.h)(0x6615147C)
 I (..\CMSIS\HAL_Lib\Inc\hal_wwdg.h)(0x6615147C)
-F (..\tinyUSB\tusb.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/tusb.o -MMD)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+F (..\tinyUSB\tusb.c)(0x66C2AF1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/tusb.o -MMD)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
-I (..\tinyUSB\common\tusb_private.h)(0x6615147C)
-I (..\tinyUSB\device\usbd_pvt.h)(0x6615147C)
-F (..\tinyUSB\device\usbd.c)(0x68A2EDBD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/usbd.o -MMD)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_private.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd_pvt.h)(0x66C2AF1D)
+F (..\tinyUSB\device\usbd.c)(0x66C2AF1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/usbd.o -MMD)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\device\dcd.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
-I (..\tinyUSB\common\tusb_private.h)(0x6615147C)
-I (..\tinyUSB\device\usbd_pvt.h)(0x6615147C)
-F (..\tinyUSB\device\usbd_control.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/usbd_control.o -MMD)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\device\dcd.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_private.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd_pvt.h)(0x66C2AF1D)
+F (..\tinyUSB\device\usbd_control.c)(0x66C2AF1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/usbd_control.o -MMD)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\device\dcd.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\tusb.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
-I (..\tinyUSB\device\usbd_pvt.h)(0x6615147C)
-F (..\tinyUSB\common\tusb_fifo.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/tusb_fifo.o -MMD)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\device\dcd.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd_pvt.h)(0x66C2AF1D)
+F (..\tinyUSB\common\tusb_fifo.c)(0x66C2AF1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/tusb_fifo.o -MMD)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-F (..\tinyUSB\class\hid\hid_device.c)(0x68A3CD78)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/hid_device.o -MMD)
-I (..\tinyUSB\tusb_option.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_compiler.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+F (..\tinyUSB\class\hid\hid_device.c)(0x66C2AF1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/hid_device.o -MMD)
+I (..\tinyUSB\tusb_option.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_compiler.h)(0x66C2AF1D)
 I (..\USER\tusb_config.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_mcu.h)(0x6615147C)
-I (..\tinyUSB\device\usbd.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_common.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_verify.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_types.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_debug.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_timeout.h)(0x6615147C)
-I (..\tinyUSB\device\usbd_pvt.h)(0x6615147C)
-I (..\tinyUSB\osal\osal.h)(0x6615147C)
-I (..\tinyUSB\osal\osal_none.h)(0x6615147C)
-I (..\tinyUSB\common\tusb_fifo.h)(0x6615147C)
-I (..\tinyUSB\class\hid\hid_device.h)(0x68A3CAA1)
-I (..\tinyUSB\class\hid\hid.h)(0x6615147C)
+I (..\tinyUSB\common\tusb_mcu.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_common.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_verify.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_types.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_debug.h)(0x66C2AF1D)
+I (..\tinyUSB\device\usbd_pvt.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal.h)(0x66C2AF1D)
+I (..\tinyUSB\osal\osal_none.h)(0x66C2AF1D)
+I (..\tinyUSB\common\tusb_fifo.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid_device.h)(0x66C2AF1D)
+I (..\tinyUSB\class\hid\hid.h)(0x66C2AF1D)
 F (..\CMSIS\HAL_Lib\Src\hal_adc.c)(0x6615147C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=star-mc1 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../USER -I ../tinyUSB -I ../tinyUSB/class/hid -I ../tinyUSB/common -I ../tinyUSB/device -I ../CMSIS -I ../CMSIS/Include -I ../CMSIS/HAL_Lib/Inc-IC:/Users/Lodge/AppData/Local/Arm/Packs/MindMotion/MM32F5277E_DFP/1.3.0/Device/MM32F5277E-D__UVISION_VERSION="542" -DMM32F5277E7PV -DUSE_STDPERIPH_DRIVER -DCUSTOM_HSE_VAL -DAPP_TINYUSB -DCFG_TUSB_MCU-o ./objects/hal_adc.o -MMD)
 I (..\CMSIS\HAL_Lib\Inc\hal_adc.h)(0x6615147C)
 I (..\CMSIS\Include\mm32_device.h)(0x6615147C)

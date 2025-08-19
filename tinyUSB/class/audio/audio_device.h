@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2020 Ha Thach (tinyusb.org)
@@ -179,6 +179,11 @@
 #error EP software buffer size MUST BE at least as big as maximum EP size
 #endif
 #endif
+#endif
+
+// (For TYPE-I format only) Flow control is necessary to allow IN ep send correct amount of data, unless it's a virtual device where data is perfectly synchronized to USB clock.
+#ifndef CFG_TUD_AUDIO_EP_IN_FLOW_CONTROL
+#define CFG_TUD_AUDIO_EP_IN_FLOW_CONTROL  1
 #endif
 
 // Enable/disable feedback EP (required for asynchronous RX applications)
@@ -392,6 +397,7 @@ tu_fifo_t* tud_audio_n_get_tx_support_ff          (uint8_t func_id, uint8_t ff_i
 uint16_t    tud_audio_int_ctr_n_write             (uint8_t func_id, uint8_t const* buffer, uint16_t len);
 #endif
 
+
 //--------------------------------------------------------------------+
 // Application API (Interface0)
 //--------------------------------------------------------------------+
@@ -448,12 +454,12 @@ bool tud_audio_buffer_and_schedule_control_xfer(uint8_t rhport, tusb_control_req
 //--------------------------------------------------------------------+
 
 #if CFG_TUD_AUDIO_ENABLE_EP_IN
-/* TU_ATTR_WEAK */ bool tud_audio_tx_done_pre_load_cb(uint8_t rhport, uint8_t func_id, uint8_t ep_in, uint8_t cur_alt_setting);
+TU_ATTR_WEAK bool tud_audio_tx_done_pre_load_cb(uint8_t rhport, uint8_t func_id, uint8_t ep_in, uint8_t cur_alt_setting);
 TU_ATTR_WEAK bool tud_audio_tx_done_post_load_cb(uint8_t rhport, uint16_t n_bytes_copied, uint8_t func_id, uint8_t ep_in, uint8_t cur_alt_setting);
 #endif
 
 #if CFG_TUD_AUDIO_ENABLE_EP_OUT
-/* TU_ATTR_WEAK */ bool tud_audio_rx_done_pre_read_cb(uint8_t rhport, uint16_t n_bytes_received, uint8_t func_id, uint8_t ep_out, uint8_t cur_alt_setting);
+TU_ATTR_WEAK bool tud_audio_rx_done_pre_read_cb(uint8_t rhport, uint16_t n_bytes_received, uint8_t func_id, uint8_t ep_out, uint8_t cur_alt_setting);
 TU_ATTR_WEAK bool tud_audio_rx_done_post_read_cb(uint8_t rhport, uint16_t n_bytes_received, uint8_t func_id, uint8_t ep_out, uint8_t cur_alt_setting);
 #endif
 
@@ -473,7 +479,7 @@ TU_ATTR_WEAK void tud_audio_fb_done_cb(uint8_t func_id);
 // the choice of format is left to the caller and feedback argument is sent as-is. If CFG_TUD_AUDIO_ENABLE_FEEDBACK_FORMAT_CORRECTION is set, then tinyusb
 // expects 16.16 format and handles the conversion to 10.14 on FS.
 //
-// Note that due to a bug in its USB Audio 2.0 driver, Windows currently requires 16.16 format for _all_ USB 2.0 devices. On Linux and macOS it seems the 
+// Note that due to a bug in its USB Audio 2.0 driver, Windows currently requires 16.16 format for _all_ USB 2.0 devices. On Linux and macOS it seems the
 // driver can work with either format. So a good compromise is to keep format correction disabled and stick to 16.16 format.
 
 // Feedback value can be determined from within the SOF ISR of the audio driver. This should reduce jitter. If the feature is used, the user can not set the feedback value.
@@ -536,10 +542,10 @@ TU_ATTR_WEAK bool tud_audio_int_ctr_done_cb(uint8_t rhport, uint16_t n_bytes_cop
 #endif
 
 // Invoked when audio set interface request received
-/* TU_ATTR_WEAK */ bool tud_audio_set_itf_cb(uint8_t rhport, tusb_control_request_t const * p_request);
+TU_ATTR_WEAK bool tud_audio_set_itf_cb(uint8_t rhport, tusb_control_request_t const * p_request);
 
 // Invoked when audio set interface request received which closes an EP
-/* TU_ATTR_WEAK */ bool tud_audio_set_itf_close_EP_cb(uint8_t rhport, tusb_control_request_t const * p_request);
+TU_ATTR_WEAK bool tud_audio_set_itf_close_EP_cb(uint8_t rhport, tusb_control_request_t const * p_request);
 
 // Invoked when audio class specific set request received for an EP
 TU_ATTR_WEAK bool tud_audio_set_req_ep_cb(uint8_t rhport, tusb_control_request_t const * p_request, uint8_t *pBuff);
@@ -548,7 +554,7 @@ TU_ATTR_WEAK bool tud_audio_set_req_ep_cb(uint8_t rhport, tusb_control_request_t
 TU_ATTR_WEAK bool tud_audio_set_req_itf_cb(uint8_t rhport, tusb_control_request_t const * p_request, uint8_t *pBuff);
 
 // Invoked when audio class specific set request received for an entity
-/* TU_ATTR_WEAK */ bool tud_audio_set_req_entity_cb(uint8_t rhport, tusb_control_request_t const * p_request, uint8_t *pBuff);
+TU_ATTR_WEAK bool tud_audio_set_req_entity_cb(uint8_t rhport, tusb_control_request_t const * p_request, uint8_t *pBuff);
 
 // Invoked when audio class specific get request received for an EP
 TU_ATTR_WEAK bool tud_audio_get_req_ep_cb(uint8_t rhport, tusb_control_request_t const * p_request);
@@ -557,7 +563,7 @@ TU_ATTR_WEAK bool tud_audio_get_req_ep_cb(uint8_t rhport, tusb_control_request_t
 TU_ATTR_WEAK bool tud_audio_get_req_itf_cb(uint8_t rhport, tusb_control_request_t const * p_request);
 
 // Invoked when audio class specific get request received for an entity
-/* TU_ATTR_WEAK */ bool tud_audio_get_req_entity_cb(uint8_t rhport, tusb_control_request_t const * p_request);
+TU_ATTR_WEAK bool tud_audio_get_req_entity_cb(uint8_t rhport, tusb_control_request_t const * p_request);
 
 //--------------------------------------------------------------------+
 // Inline Functions
